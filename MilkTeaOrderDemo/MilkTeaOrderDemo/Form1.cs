@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MilkTeaOrderDemo
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class FormMain : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
         }
