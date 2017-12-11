@@ -45,6 +45,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.menu1 = new MilkTeaOrderDemo.Menu();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -269,11 +270,21 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // menu1
+            // 
+            this.menu1.AutoScroll = true;
+            this.menu1.AutoScrollMargin = new System.Drawing.Size(20, 20);
+            this.menu1.Location = new System.Drawing.Point(250, 156);
+            this.menu1.Name = "menu1";
+            this.menu1.Size = new System.Drawing.Size(798, 566);
+            this.menu1.TabIndex = 2;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.menu1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftSidePanel);
             this.Name = "FormMain";
@@ -304,6 +315,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel SidePanel;
+        private Menu menu1;
     }
 }
 
