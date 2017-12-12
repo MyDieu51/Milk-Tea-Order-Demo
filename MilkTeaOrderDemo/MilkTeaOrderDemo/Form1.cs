@@ -19,29 +19,35 @@ namespace MilkTeaOrderDemo
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = HomeButton.Height;
-            SidePanel.Top = HomeButton.Top;
+            SidePanel.Height = btnHome.Height;
+            SidePanel.Top = btnHome.Top;
         }
 
         private void MenuButton_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = MenuButton.Height;
-            SidePanel.Top = MenuButton.Top;
+            SidePanel.Height = btnMenu.Height;
+            SidePanel.Top = btnMenu.Top;
 
         }
 
         private void DashboardButton_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = DashboardButton.Height;
-            SidePanel.Top = DashboardButton.Top;
+            SidePanel.Height = btnDashboard.Height;
+            SidePanel.Top = btnDashboard.Top;
 
         }
 
         private void AboutButton_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = AboutButton.Height;
-            SidePanel.Top = AboutButton.Top;
+            SidePanel.Height = btnAbout.Height;
+            SidePanel.Top = btnAbout.Top;
+            aboutForm1.BringToFront();
 
+        }
+
+        private void btnESC_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

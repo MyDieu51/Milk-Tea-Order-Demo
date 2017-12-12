@@ -31,21 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.LeftSidePanel = new System.Windows.Forms.Panel();
             this.LogoPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.SidePanel = new System.Windows.Forms.Panel();
-            this.AboutButton = new System.Windows.Forms.Button();
-            this.DashboardButton = new System.Windows.Forms.Button();
-            this.MenuButton = new System.Windows.Forms.Button();
-            this.HomeButton = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnESC = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -57,10 +59,10 @@
             this.LeftSidePanel.BackColor = System.Drawing.Color.Gray;
             this.LeftSidePanel.Controls.Add(this.LogoPanel);
             this.LeftSidePanel.Controls.Add(this.SidePanel);
-            this.LeftSidePanel.Controls.Add(this.AboutButton);
-            this.LeftSidePanel.Controls.Add(this.DashboardButton);
-            this.LeftSidePanel.Controls.Add(this.MenuButton);
-            this.LeftSidePanel.Controls.Add(this.HomeButton);
+            this.LeftSidePanel.Controls.Add(this.btnAbout);
+            this.LeftSidePanel.Controls.Add(this.btnDashboard);
+            this.LeftSidePanel.Controls.Add(this.btnMenu);
+            this.LeftSidePanel.Controls.Add(this.btnHome);
             this.LeftSidePanel.Controls.Add(this.panel2);
             this.LeftSidePanel.Location = new System.Drawing.Point(0, 5);
             this.LeftSidePanel.Name = "LeftSidePanel";
@@ -77,6 +79,18 @@
             this.LogoPanel.Name = "LogoPanel";
             this.LogoPanel.Size = new System.Drawing.Size(250, 111);
             this.LogoPanel.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(132, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 28);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "CUISINE";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -108,73 +122,73 @@
             this.SidePanel.Size = new System.Drawing.Size(10, 88);
             this.SidePanel.TabIndex = 3;
             // 
-            // AboutButton
+            // btnAbout
             // 
-            this.AboutButton.FlatAppearance.BorderSize = 0;
-            this.AboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AboutButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AboutButton.Image = ((System.Drawing.Image)(resources.GetObject("AboutButton.Image")));
-            this.AboutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AboutButton.Location = new System.Drawing.Point(12, 442);
-            this.AboutButton.Name = "AboutButton";
-            this.AboutButton.Size = new System.Drawing.Size(238, 88);
-            this.AboutButton.TabIndex = 2;
-            this.AboutButton.Text = "ABOUT  ";
-            this.AboutButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AboutButton.UseVisualStyleBackColor = true;
-            this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
+            this.btnAbout.FlatAppearance.BorderSize = 0;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
+            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.Location = new System.Drawing.Point(12, 442);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(238, 88);
+            this.btnAbout.TabIndex = 2;
+            this.btnAbout.Text = "ABOUT  ";
+            this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.AboutButton_Click);
             // 
-            // DashboardButton
+            // btnDashboard
             // 
-            this.DashboardButton.FlatAppearance.BorderSize = 0;
-            this.DashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DashboardButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashboardButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DashboardButton.Image = ((System.Drawing.Image)(resources.GetObject("DashboardButton.Image")));
-            this.DashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DashboardButton.Location = new System.Drawing.Point(12, 348);
-            this.DashboardButton.Name = "DashboardButton";
-            this.DashboardButton.Size = new System.Drawing.Size(238, 88);
-            this.DashboardButton.TabIndex = 2;
-            this.DashboardButton.Text = "DASHBOARD  ";
-            this.DashboardButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.DashboardButton.UseVisualStyleBackColor = true;
-            this.DashboardButton.Click += new System.EventHandler(this.DashboardButton_Click);
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(12, 348);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(238, 88);
+            this.btnDashboard.TabIndex = 2;
+            this.btnDashboard.Text = "DASHBOARD  ";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.DashboardButton_Click);
             // 
-            // MenuButton
+            // btnMenu
             // 
-            this.MenuButton.FlatAppearance.BorderSize = 0;
-            this.MenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MenuButton.Image = ((System.Drawing.Image)(resources.GetObject("MenuButton.Image")));
-            this.MenuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MenuButton.Location = new System.Drawing.Point(12, 254);
-            this.MenuButton.Name = "MenuButton";
-            this.MenuButton.Size = new System.Drawing.Size(238, 88);
-            this.MenuButton.TabIndex = 2;
-            this.MenuButton.Text = "MENU  ";
-            this.MenuButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MenuButton.UseVisualStyleBackColor = true;
-            this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.Location = new System.Drawing.Point(12, 254);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(238, 88);
+            this.btnMenu.TabIndex = 2;
+            this.btnMenu.Text = "MENU  ";
+            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.MenuButton_Click);
             // 
-            // HomeButton
+            // btnHome
             // 
-            this.HomeButton.FlatAppearance.BorderSize = 0;
-            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.HomeButton.Image = ((System.Drawing.Image)(resources.GetObject("HomeButton.Image")));
-            this.HomeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HomeButton.Location = new System.Drawing.Point(12, 151);
-            this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(238, 88);
-            this.HomeButton.TabIndex = 2;
-            this.HomeButton.Text = "HOME  ";
-            this.HomeButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.HomeButton.UseVisualStyleBackColor = true;
-            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(12, 151);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(238, 88);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "HOME  ";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // panel2
             // 
@@ -186,11 +200,12 @@
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.LightGreen;
+            this.TopPanel.Controls.Add(this.panel1);
             this.TopPanel.Controls.Add(this.button9);
             this.TopPanel.Controls.Add(this.button8);
             this.TopPanel.Controls.Add(this.button7);
             this.TopPanel.Controls.Add(this.button6);
-            this.TopPanel.Controls.Add(this.button5);
+            this.TopPanel.Controls.Add(this.btnESC);
             this.TopPanel.Location = new System.Drawing.Point(250, 5);
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1032, 70);
@@ -256,38 +271,44 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnESC
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(947, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 55);
-            this.button5.TabIndex = 2;
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnESC.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnESC.FlatAppearance.BorderSize = 0;
+            this.btnESC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnESC.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnESC.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnESC.Image = ((System.Drawing.Image)(resources.GetObject("btnESC.Image")));
+            this.btnESC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnESC.Location = new System.Drawing.Point(947, 7);
+            this.btnESC.Name = "btnESC";
+            this.btnESC.Size = new System.Drawing.Size(60, 55);
+            this.btnESC.TabIndex = 2;
+            this.btnESC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnESC.UseVisualStyleBackColor = true;
+            this.btnESC.Click += new System.EventHandler(this.btnESC_Click);
             // 
-            // label2
+            // panel1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(132, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 28);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "CUISINE";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.Location = new System.Drawing.Point(0, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1029, 646);
+            this.panel1.TabIndex = 2;
+            // 
+            // aboutForm1
+            // 
+            this.aboutForm1.Location = new System.Drawing.Point(250, 73);
+            this.aboutForm1.Name = "aboutForm1";
+            this.aboutForm1.Size = new System.Drawing.Size(1029, 646);
+            this.aboutForm1.TabIndex = 2;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnESC;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.aboutForm1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftSidePanel);
             this.Name = "FormMain";
@@ -303,10 +324,10 @@
         #endregion
 
         private System.Windows.Forms.Panel LeftSidePanel;
-        private System.Windows.Forms.Button AboutButton;
-        private System.Windows.Forms.Button DashboardButton;
-        private System.Windows.Forms.Button MenuButton;
-        private System.Windows.Forms.Button HomeButton;
+        private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Panel LogoPanel;
@@ -316,9 +337,11 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnESC;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private AboutForm aboutForm1;
     }
 }
 
