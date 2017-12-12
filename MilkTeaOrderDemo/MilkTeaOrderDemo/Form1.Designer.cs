@@ -45,7 +45,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.menu1 = new MilkTeaOrderDemo.Menu();
+            this.label2 = new System.Windows.Forms.Label();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -69,7 +69,8 @@
             // 
             // LogoPanel
             // 
-            this.LogoPanel.BackColor = System.Drawing.Color.Orange;
+            this.LogoPanel.BackColor = System.Drawing.Color.ForestGreen;
+            this.LogoPanel.Controls.Add(this.label2);
             this.LogoPanel.Controls.Add(this.label1);
             this.LogoPanel.Controls.Add(this.pictureBox6);
             this.LogoPanel.Location = new System.Drawing.Point(0, 0);
@@ -80,28 +81,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(115, 39);
+            this.label1.Location = new System.Drawing.Point(132, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 23);
+            this.label1.Size = new System.Drawing.Size(109, 28);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Korean Food";
+            this.label1.Text = "KOREAN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(13, 7);
+            this.pictureBox6.Location = new System.Drawing.Point(12, 7);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(96, 96);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.Size = new System.Drawing.Size(97, 86);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
             // SidePanel
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.Orange;
+            this.SidePanel.BackColor = System.Drawing.Color.LightGreen;
             this.SidePanel.Location = new System.Drawing.Point(0, 151);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 88);
@@ -184,7 +185,7 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.Orange;
+            this.TopPanel.BackColor = System.Drawing.Color.LightGreen;
             this.TopPanel.Controls.Add(this.button9);
             this.TopPanel.Controls.Add(this.button8);
             this.TopPanel.Controls.Add(this.button7);
@@ -270,21 +271,23 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // menu1
+            // label2
             // 
-            this.menu1.AutoScroll = true;
-            this.menu1.AutoScrollMargin = new System.Drawing.Size(20, 20);
-            this.menu1.Location = new System.Drawing.Point(250, 156);
-            this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(798, 566);
-            this.menu1.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(132, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 28);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "CUISINE";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.menu1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftSidePanel);
             this.Name = "FormMain";
@@ -315,7 +318,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel SidePanel;
-        private Menu menu1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -42,6 +42,6 @@ namespace MilkTeaOrderDemo
             SidePanel.Height = AboutButton.Height;
             SidePanel.Top = AboutButton.Top;
 
-        }       
+        }
     }
 }
