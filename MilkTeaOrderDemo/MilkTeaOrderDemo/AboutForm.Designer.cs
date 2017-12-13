@@ -50,7 +50,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "AboutForm";
-            this.Size = new System.Drawing.Size(1029, 646);
+            this.Size = new System.Drawing.Size(1029, 606);
             this.ResumeLayout(false);
             this.PerformLayout();
 

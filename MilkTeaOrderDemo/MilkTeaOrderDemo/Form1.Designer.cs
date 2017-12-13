@@ -39,14 +39,11 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.btnESC = new System.Windows.Forms.Button();
+            this.homeControl1 = new MilkTeaOrderDemo.HomeControl();
             this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
@@ -63,7 +60,6 @@
             this.LeftSidePanel.Controls.Add(this.btnDashboard);
             this.LeftSidePanel.Controls.Add(this.btnMenu);
             this.LeftSidePanel.Controls.Add(this.btnHome);
-            this.LeftSidePanel.Controls.Add(this.panel2);
             this.LeftSidePanel.Location = new System.Drawing.Point(0, 5);
             this.LeftSidePanel.Name = "LeftSidePanel";
             this.LeftSidePanel.Size = new System.Drawing.Size(250, 720);
@@ -71,13 +67,13 @@
             // 
             // LogoPanel
             // 
-            this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(245)))), ((int)(((byte)(108)))));
+            this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(192)))), ((int)(((byte)(46)))));
             this.LogoPanel.Controls.Add(this.label2);
             this.LogoPanel.Controls.Add(this.label1);
             this.LogoPanel.Controls.Add(this.pictureBox6);
             this.LogoPanel.Location = new System.Drawing.Point(0, 0);
             this.LogoPanel.Name = "LogoPanel";
-            this.LogoPanel.Size = new System.Drawing.Size(250, 111);
+            this.LogoPanel.Size = new System.Drawing.Size(250, 110);
             this.LogoPanel.TabIndex = 1;
             // 
             // label2
@@ -116,7 +112,7 @@
             // 
             // SidePanel
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(225)))), ((int)(((byte)(24)))));
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(192)))), ((int)(((byte)(46)))));
             this.SidePanel.Location = new System.Drawing.Point(0, 151);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 88);
@@ -190,33 +186,16 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.HomeButton_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(250, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1032, 70);
-            this.panel2.TabIndex = 1;
-            // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(245)))), ((int)(((byte)(108)))));
-            this.TopPanel.Controls.Add(this.panel1);
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(192)))), ((int)(((byte)(46)))));
             this.TopPanel.Controls.Add(this.button9);
             this.TopPanel.Controls.Add(this.button8);
-            this.TopPanel.Controls.Add(this.button7);
-            this.TopPanel.Controls.Add(this.button6);
             this.TopPanel.Controls.Add(this.btnESC);
             this.TopPanel.Location = new System.Drawing.Point(250, 5);
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1032, 70);
             this.TopPanel.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1029, 646);
-            this.panel1.TabIndex = 2;
             // 
             // button9
             // 
@@ -248,36 +227,6 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(769, 7);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 55);
-            this.button7.TabIndex = 2;
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(858, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 55);
-            this.button6.TabIndex = 2;
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // btnESC
             // 
             this.btnESC.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -295,23 +244,31 @@
             this.btnESC.UseVisualStyleBackColor = true;
             this.btnESC.Click += new System.EventHandler(this.btnESC_Click);
             // 
+            // homeControl1
+            // 
+            this.homeControl1.Location = new System.Drawing.Point(250, 72);
+            this.homeControl1.Name = "homeControl1";
+            this.homeControl1.Size = new System.Drawing.Size(1029, 648);
+            this.homeControl1.TabIndex = 3;
+            // 
             // aboutForm1
             // 
-            this.aboutForm1.Location = new System.Drawing.Point(250, 73);
+            this.aboutForm1.Location = new System.Drawing.Point(250, 116);
             this.aboutForm1.Name = "aboutForm1";
-            this.aboutForm1.Size = new System.Drawing.Size(1029, 646);
+            this.aboutForm1.Size = new System.Drawing.Size(1029, 604);
             this.aboutForm1.TabIndex = 2;
             // 
-            // FormMain
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnESC;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.homeControl1);
             this.Controls.Add(this.aboutForm1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftSidePanel);
-            this.Name = "FormMain";
+            this.Name = "MainForm";
             this.LeftSidePanel.ResumeLayout(false);
             this.LogoPanel.ResumeLayout(false);
             this.LogoPanel.PerformLayout();
@@ -328,20 +285,17 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Panel LogoPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnESC;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
         private AboutForm aboutForm1;
+        private HomeControl homeControl1;
     }
 }
 
