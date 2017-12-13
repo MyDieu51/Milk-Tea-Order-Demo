@@ -10,11 +10,29 @@ using System.Windows.Forms;
 
 namespace MilkTeaOrderDemo
 {
-    public partial class LoginForm : UserControl
+    public partial class LoginForm : Form
     {
         public LoginForm()
         {
             InitializeComponent();
+        }
+
+        Login login = new Login("admin", "admin");
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string user = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            if(login.IsLoggedIn(user, password))
+            {
+                DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

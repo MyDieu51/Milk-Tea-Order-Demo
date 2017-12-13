@@ -1,6 +1,6 @@
 ﻿namespace MilkTeaOrderDemo
 {
-    partial class FormMain
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LeftSidePanel = new System.Windows.Forms.Panel();
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,12 +41,12 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TopPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnESC = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             // LogoPanel
             // 
-            this.LogoPanel.BackColor = System.Drawing.Color.ForestGreen;
+            this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(245)))), ((int)(((byte)(108)))));
             this.LogoPanel.Controls.Add(this.label2);
             this.LogoPanel.Controls.Add(this.label1);
             this.LogoPanel.Controls.Add(this.pictureBox6);
@@ -116,7 +116,7 @@
             // 
             // SidePanel
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.LightGreen;
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(225)))), ((int)(((byte)(24)))));
             this.SidePanel.Location = new System.Drawing.Point(0, 151);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 88);
@@ -199,7 +199,7 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.LightGreen;
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(245)))), ((int)(((byte)(108)))));
             this.TopPanel.Controls.Add(this.panel1);
             this.TopPanel.Controls.Add(this.button9);
             this.TopPanel.Controls.Add(this.button8);
@@ -210,6 +210,13 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1032, 70);
             this.TopPanel.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1029, 646);
+            this.panel1.TabIndex = 2;
             // 
             // button9
             // 
@@ -287,13 +294,6 @@
             this.btnESC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnESC.UseVisualStyleBackColor = true;
             this.btnESC.Click += new System.EventHandler(this.btnESC_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1029, 646);
-            this.panel1.TabIndex = 2;
             // 
             // aboutForm1
             // 
