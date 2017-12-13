@@ -39,19 +39,20 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnESC = new System.Windows.Forms.Button();
-            this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
+            this.panMenuForm = new System.Windows.Forms.FlowLayoutPanel();
+            this.panMenu = new System.Windows.Forms.Panel();
+            this.orderSide1 = new MilkTeaOrderDemo.OrderSide();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.TopPanel.SuspendLayout();
+            this.panMenuForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftSidePanel
@@ -63,7 +64,6 @@
             this.LeftSidePanel.Controls.Add(this.btnDashboard);
             this.LeftSidePanel.Controls.Add(this.btnMenu);
             this.LeftSidePanel.Controls.Add(this.btnHome);
-            this.LeftSidePanel.Controls.Add(this.panel2);
             this.LeftSidePanel.Location = new System.Drawing.Point(0, 5);
             this.LeftSidePanel.Name = "LeftSidePanel";
             this.LeftSidePanel.Size = new System.Drawing.Size(250, 720);
@@ -190,17 +190,9 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.HomeButton_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(250, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1032, 70);
-            this.panel2.TabIndex = 1;
-            // 
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(245)))), ((int)(((byte)(108)))));
-            this.TopPanel.Controls.Add(this.panel1);
             this.TopPanel.Controls.Add(this.button9);
             this.TopPanel.Controls.Add(this.button8);
             this.TopPanel.Controls.Add(this.button7);
@@ -210,13 +202,6 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1032, 70);
             this.TopPanel.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1029, 646);
-            this.panel1.TabIndex = 2;
             // 
             // button9
             // 
@@ -295,28 +280,50 @@
             this.btnESC.UseVisualStyleBackColor = true;
             this.btnESC.Click += new System.EventHandler(this.btnESC_Click);
             // 
-            // aboutForm1
+            // panMenuForm
             // 
-            this.aboutForm1.Location = new System.Drawing.Point(250, 73);
-            this.aboutForm1.Name = "aboutForm1";
-            this.aboutForm1.Size = new System.Drawing.Size(1029, 646);
-            this.aboutForm1.TabIndex = 2;
+            this.panMenuForm.BackColor = System.Drawing.Color.White;
+            this.panMenuForm.Controls.Add(this.panMenu);
+            this.panMenuForm.Controls.Add(this.orderSide1);
+            this.panMenuForm.Location = new System.Drawing.Point(250, 75);
+            this.panMenuForm.Name = "panMenuForm";
+            this.panMenuForm.Size = new System.Drawing.Size(1030, 647);
+            this.panMenuForm.TabIndex = 2;
             // 
-            // FormMain
+            // panMenu
+            // 
+            this.panMenu.AutoScroll = true;
+            this.panMenu.AutoScrollMargin = new System.Drawing.Size(10, 10);
+            this.panMenu.BackColor = System.Drawing.Color.White;
+            this.panMenu.Location = new System.Drawing.Point(3, 3);
+            this.panMenu.Name = "panMenu";
+            this.panMenu.Size = new System.Drawing.Size(718, 644);
+            this.panMenu.TabIndex = 0;
+            // 
+            // orderSide1
+            // 
+            this.orderSide1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.orderSide1.Location = new System.Drawing.Point(727, 3);
+            this.orderSide1.Name = "orderSide1";
+            this.orderSide1.Size = new System.Drawing.Size(300, 644);
+            this.orderSide1.TabIndex = 1;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnESC;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.aboutForm1);
+            this.Controls.Add(this.panMenuForm);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftSidePanel);
-            this.Name = "FormMain";
+            this.Name = "MainForm";
             this.LeftSidePanel.ResumeLayout(false);
             this.LogoPanel.ResumeLayout(false);
             this.LogoPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.TopPanel.ResumeLayout(false);
+            this.panMenuForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -328,7 +335,6 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Panel LogoPanel;
         private System.Windows.Forms.Label label1;
@@ -340,8 +346,9 @@
         private System.Windows.Forms.Button btnESC;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private AboutForm aboutForm1;
+        private System.Windows.Forms.FlowLayoutPanel panMenuForm;
+        private System.Windows.Forms.Panel panMenu;
+        private OrderSide orderSide1;
     }
 }
 
