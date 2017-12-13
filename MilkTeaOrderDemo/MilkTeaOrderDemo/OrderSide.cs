@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace MilkTeaOrderDemo
 {
-    public partial class Menu : UserControl
+    public partial class OrderSide : UserControl
     {
-        public Menu()
+        public OrderSide()
         {
             InitializeComponent();
         }
 
-        public void LoadInfo(FoodModel food)
+        private void OrderSide_Load(object sender, EventArgs e)
         {
-            picFood.ImageLocation = food.PicLocal;
-            lblName.Text = food.Name;
-            lblPrice.Text = food.Price.ToString();
+            txtDate.Text = DateTime.Now.ToShortDateString();
+            txtTime.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
