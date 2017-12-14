@@ -8,7 +8,7 @@ namespace MilkTeaOrderDemo
 {
     public class FoodModel
     {
-        private static int iD;
+        private static int iD = 0;
         private int idFood;
         private string name;
         private int price;
@@ -24,11 +24,12 @@ namespace MilkTeaOrderDemo
 
         public FoodModel()
         {
-
+            this.idFood = iD++;
         }
 
         public FoodModel(string name, int price, int basicPrice, string picLocal)
         {
+            this.idFood = iD++;
             this.Name = name;
             this.Price = price;
             this.BasicPrice = basicPrice;

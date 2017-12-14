@@ -12,6 +12,12 @@ namespace MilkTeaOrderDemo
         public int idInvoice, qtyProduct, total;
         public FoodModel food;
 
+        public string FoodName { get => food.Name; }
+
+        public int Quantity { get => qtyProduct; set => qtyProduct = value; }
+
+        public int Total { get => total; set => total = value; }
+
         public InvoiceDetail()
         {
 

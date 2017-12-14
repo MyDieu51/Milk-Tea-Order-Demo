@@ -31,11 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panMenu = new System.Windows.Forms.Panel();
             this.panListOrder = new System.Windows.Forms.Panel();
+            this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTime = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.TextBox();
@@ -45,15 +44,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvOrder = new System.Windows.Forms.DataGridView();
-            this.foodModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panListOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDetailBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panMenu
@@ -82,6 +79,48 @@
             this.panListOrder.Name = "panListOrder";
             this.panListOrder.Size = new System.Drawing.Size(312, 647);
             this.panListOrder.TabIndex = 1;
+            // 
+            // dgvOrder
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvOrder.AutoGenerateColumns = false;
+            this.dgvOrder.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.foodNameDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn});
+            this.dgvOrder.DataSource = this.invoiceDetailBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvOrder.EnableHeadersVisualStyles = false;
+            this.dgvOrder.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvOrder.Location = new System.Drawing.Point(0, 216);
+            this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.RowHeadersVisible = false;
+            this.dgvOrder.Size = new System.Drawing.Size(312, 273);
+            this.dgvOrder.TabIndex = 12;
             // 
             // label3
             // 
@@ -177,80 +216,30 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Total";
             // 
-            // dgvOrder
+            // invoiceDetailBindingSource
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvOrder.AutoGenerateColumns = false;
-            this.dgvOrder.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.clnQuantity,
-            this.priceDataGridViewTextBoxColumn,
-            this.clnSubTotal});
-            this.dgvOrder.DataSource = this.foodModelBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvOrder.EnableHeadersVisualStyles = false;
-            this.dgvOrder.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvOrder.Location = new System.Drawing.Point(-20, 215);
-            this.dgvOrder.Name = "dgvOrder";
-            this.dgvOrder.RowHeadersVisible = false;
-            this.dgvOrder.Size = new System.Drawing.Size(357, 273);
-            this.dgvOrder.TabIndex = 12;
+            this.invoiceDetailBindingSource.DataSource = typeof(MilkTeaOrderDemo.InvoiceDetail);
             // 
-            // foodModelBindingSource
+            // foodNameDataGridViewTextBoxColumn
             // 
-            this.foodModelBindingSource.DataSource = typeof(MilkTeaOrderDemo.FoodModel);
+            this.foodNameDataGridViewTextBoxColumn.DataPropertyName = "FoodName";
+            this.foodNameDataGridViewTextBoxColumn.HeaderText = "Food Name";
+            this.foodNameDataGridViewTextBoxColumn.Name = "foodNameDataGridViewTextBoxColumn";
+            this.foodNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.foodNameDataGridViewTextBoxColumn.Width = 169;
             // 
-            // nameDataGridViewTextBoxColumn
+            // quantityDataGridViewTextBoxColumn
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.Width = 30;
             // 
-            // clnQuantity
+            // totalDataGridViewTextBoxColumn
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.clnQuantity.DefaultCellStyle = dataGridViewCellStyle3;
-            this.clnQuantity.HeaderText = "Qty";
-            this.clnQuantity.Name = "clnQuantity";
-            this.clnQuantity.Width = 30;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // clnSubTotal
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.clnSubTotal.DefaultCellStyle = dataGridViewCellStyle4;
-            this.clnSubTotal.HeaderText = "Sub Total";
-            this.clnSubTotal.Name = "clnSubTotal";
-            this.clnSubTotal.Width = 119;
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Sub Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             // 
             // MenuForm
             // 
@@ -263,7 +252,7 @@
             this.panListOrder.ResumeLayout(false);
             this.panListOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,10 +271,9 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvOrder;
-        private System.Windows.Forms.BindingSource foodModelBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnSubTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn foodNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource invoiceDetailBindingSource;
     }
 }

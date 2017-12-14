@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MilkTeaOrderDemo
 {
@@ -15,23 +16,24 @@ namespace MilkTeaOrderDemo
         List<Invoice> listReceipt;
         FoodCtrl food_ctrl = new FoodCtrl();
 
-        public InvoiceCtrl()
+        public InvoiceCtrl(FoodCtrl foodCtrl)
         {
             listInvoiceDetail = new List<InvoiceDetail>();
             tempListInvoiceDetail = new List<InvoiceDetail>();
             listReceipt = new List<Invoice>();
-        }
-
-        public void CreateReceiptDetailInfo(int idFood, int qtyProduct)
-        {
+            food_ctrl = foodCtrl;
             if (listInvoiceDetail.Count == 0)
                 InvoiceDetail.ID = 0;
             else InvoiceDetail.ID = listInvoiceDetail[listInvoiceDetail.Count - 1].idInvoice;
-            int total = qtyProduct * food_ctrl.FindFood(idFood).Price;
-            InvoiceDetail receiptdetail = new InvoiceDetail();
-            InvoiceDetail tempreceiptdetail = new InvoiceDetail((food_ctrl.FindFood(idFood)), qtyProduct);
-            listInvoiceDetail.Add(receiptdetail);
+        }
+
+        public void CreateReceiptDetailInfo(FoodModel food, int qtyProduct, DataGridView dgv)
+        {
+            int total = qtyProduct * food_ctrl.FindFood(food.IdFood).Price;
+            InvoiceDetail tempreceiptdetail = new InvoiceDetail((food_ctrl.FindFood(food.IdFood)), qtyProduct);
             tempListInvoiceDetail.Add(tempreceiptdetail);
+            dgv.DataSource = null;
+            dgv.DataSource = tempListInvoiceDetail;
         }
 
         public void CreateReceiptInfo(int idMember, int idStaff)

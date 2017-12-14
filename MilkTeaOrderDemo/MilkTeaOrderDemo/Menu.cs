@@ -21,6 +21,7 @@ namespace MilkTeaOrderDemo
         }
 
         FoodModel food = new FoodModel();
+
         public void LoadInfo(FoodModel input)
         {
             picFood.ImageLocation = input.PicLocal;

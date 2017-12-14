@@ -23,7 +23,7 @@ namespace MilkTeaOrderDemo
 
         private void LoadMenu()
         {
-            List<FoodModel> listFood = orderCtrl.ListFood;
+            List<FoodModel> listFood = orderCtrl.foodCtrl.ListFoods;
             List<Menu> listMenu = new List<Menu>();
             for (int i = 0; i < listFood.Count; i++)
             {
