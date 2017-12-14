@@ -227,7 +227,7 @@
             // 
             // menuForm1
             // 
-            this.menuForm1.Location = new System.Drawing.Point(250, 71);
+            this.menuForm1.Location = new System.Drawing.Point(250, 58);
             this.menuForm1.Name = "menuForm1";
             this.menuForm1.Size = new System.Drawing.Size(1030, 647);
             this.menuForm1.TabIndex = 5;

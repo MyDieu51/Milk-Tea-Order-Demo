@@ -17,12 +17,12 @@ namespace MilkTeaOrderDemo
 
         }
 
-        public InvoiceDetail(FoodModel food, int qtyproduct)
+        public InvoiceDetail(FoodModel food, int qtyFood)
         {
             this.idInvoice = ++ID;
             this.food = food;
-            this.qtyProduct = qtyproduct;
-            this.total = food.Price * qtyproduct;
+            this.qtyProduct = qtyFood;
+            this.total = food.Price * qtyFood;
         }
 
     }
