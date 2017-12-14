@@ -16,11 +16,11 @@ namespace MilkTeaOrderDemo
         {
             InitializeComponent();
         }
-
         private void OrderSide_Load(object sender, EventArgs e)
         {
             txtDate.Text = DateTime.Now.ToShortDateString();
             txtTime.Text = DateTime.Now.ToLongTimeString();
+            txtVAT.Text = "10 %";
         }
     }
 }

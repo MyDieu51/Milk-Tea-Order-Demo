@@ -73,6 +73,9 @@
             this.picFood.Size = new System.Drawing.Size(128, 128);
             this.picFood.TabIndex = 0;
             this.picFood.TabStop = false;
+            this.picFood.Click += new System.EventHandler(this.picFood_Click);
+            this.picFood.MouseEnter += new System.EventHandler(this.picFood_MouseEnter);
+            this.picFood.MouseLeave += new System.EventHandler(this.picFood_MouseLeave);
             // 
             // Menu
             // 

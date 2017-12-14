@@ -40,19 +40,14 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.btnESC = new System.Windows.Forms.Button();
-            this.panMenuForm = new System.Windows.Forms.FlowLayoutPanel();
-            this.panMenu = new System.Windows.Forms.Panel();
-            this.orderSide1 = new MilkTeaOrderDemo.OrderSide();
+            this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
+            this.menuControl1 = new MilkTeaOrderDemo.MenuControl();
+            this.homeControl1 = new MilkTeaOrderDemo.HomeControl();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.TopPanel.SuspendLayout();
-            this.panMenuForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftSidePanel
@@ -193,75 +188,11 @@
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(245)))), ((int)(((byte)(108)))));
-            this.TopPanel.Controls.Add(this.button9);
-            this.TopPanel.Controls.Add(this.button8);
-            this.TopPanel.Controls.Add(this.button7);
-            this.TopPanel.Controls.Add(this.button6);
             this.TopPanel.Controls.Add(this.btnESC);
             this.TopPanel.Location = new System.Drawing.Point(250, 5);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1032, 70);
+            this.TopPanel.Size = new System.Drawing.Size(1032, 51);
             this.TopPanel.TabIndex = 1;
-            // 
-            // button9
-            // 
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(529, 7);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(60, 55);
-            this.button9.TabIndex = 2;
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(446, 7);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(60, 55);
-            this.button8.TabIndex = 2;
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(769, 7);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 55);
-            this.button7.TabIndex = 2;
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(858, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 55);
-            this.button6.TabIndex = 2;
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // btnESC
             // 
@@ -271,42 +202,35 @@
             this.btnESC.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnESC.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnESC.Image = ((System.Drawing.Image)(resources.GetObject("btnESC.Image")));
-            this.btnESC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnESC.Location = new System.Drawing.Point(947, 7);
+            this.btnESC.Location = new System.Drawing.Point(972, 7);
             this.btnESC.Name = "btnESC";
-            this.btnESC.Size = new System.Drawing.Size(60, 55);
+            this.btnESC.Size = new System.Drawing.Size(35, 35);
             this.btnESC.TabIndex = 2;
             this.btnESC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnESC.UseVisualStyleBackColor = true;
             this.btnESC.Click += new System.EventHandler(this.btnESC_Click);
             // 
-            // panMenuForm
+            // aboutForm1
             // 
-            this.panMenuForm.BackColor = System.Drawing.Color.White;
-            this.panMenuForm.Controls.Add(this.panMenu);
-            this.panMenuForm.Controls.Add(this.orderSide1);
-            this.panMenuForm.Location = new System.Drawing.Point(250, 75);
-            this.panMenuForm.Name = "panMenuForm";
-            this.panMenuForm.Size = new System.Drawing.Size(1030, 647);
-            this.panMenuForm.TabIndex = 2;
+            this.aboutForm1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.aboutForm1.Location = new System.Drawing.Point(252, 58);
+            this.aboutForm1.Name = "aboutForm1";
+            this.aboutForm1.Size = new System.Drawing.Size(1030, 660);
+            this.aboutForm1.TabIndex = 2;
             // 
-            // panMenu
+            // menuControl1
             // 
-            this.panMenu.AutoScroll = true;
-            this.panMenu.AutoScrollMargin = new System.Drawing.Size(10, 10);
-            this.panMenu.BackColor = System.Drawing.Color.White;
-            this.panMenu.Location = new System.Drawing.Point(3, 3);
-            this.panMenu.Name = "panMenu";
-            this.panMenu.Size = new System.Drawing.Size(718, 644);
-            this.panMenu.TabIndex = 0;
+            this.menuControl1.Location = new System.Drawing.Point(252, 58);
+            this.menuControl1.Name = "menuControl1";
+            this.menuControl1.Size = new System.Drawing.Size(1030, 660);
+            this.menuControl1.TabIndex = 3;
             // 
-            // orderSide1
+            // homeControl1
             // 
-            this.orderSide1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.orderSide1.Location = new System.Drawing.Point(727, 3);
-            this.orderSide1.Name = "orderSide1";
-            this.orderSide1.Size = new System.Drawing.Size(300, 644);
-            this.orderSide1.TabIndex = 1;
+            this.homeControl1.Location = new System.Drawing.Point(251, 58);
+            this.homeControl1.Name = "homeControl1";
+            this.homeControl1.Size = new System.Drawing.Size(1030, 660);
+            this.homeControl1.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -314,7 +238,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnESC;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.panMenuForm);
+            this.Controls.Add(this.homeControl1);
+            this.Controls.Add(this.menuControl1);
+            this.Controls.Add(this.aboutForm1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftSidePanel);
             this.Name = "MainForm";
@@ -323,7 +249,6 @@
             this.LogoPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.TopPanel.ResumeLayout(false);
-            this.panMenuForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -339,16 +264,12 @@
         private System.Windows.Forms.Panel LogoPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnESC;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel panMenuForm;
-        private System.Windows.Forms.Panel panMenu;
-        private OrderSide orderSide1;
+        private AboutForm aboutForm1;
+        private MenuControl menuControl1;
+        private HomeControl homeControl1;
     }
 }
 

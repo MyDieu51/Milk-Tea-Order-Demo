@@ -52,5 +52,13 @@ namespace MilkTeaOrderDemo
             this.basicPrice = basicPrice;
             this.picLocal = picLocal;
         }
+
+        public FoodModel(FoodModel Food)
+        {
+            this.name = Food.name;
+            this.price = Food.price;
+            this.basicPrice = Food.basicPrice;
+            this.picLocal = Food.picLocal;
+        }
     }
 }

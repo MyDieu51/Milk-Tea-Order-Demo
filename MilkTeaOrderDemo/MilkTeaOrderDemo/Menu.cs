@@ -17,11 +17,35 @@ namespace MilkTeaOrderDemo
             InitializeComponent();
         }
 
-        public void LoadInfo(FoodModel food)
+        FoodModel food = new FoodModel();
+        public void LoadInfo(FoodModel input)
         {
-            picFood.ImageLocation = food.PicLocal;
-            lblName.Text = food.Name;
-            lblPrice.Text = food.Price.ToString();
+            picFood.ImageLocation = input.PicLocal;
+            lblName.Text = input.Name;
+            lblPrice.Text = input.Price.ToString();
+            food = input;
+        }
+
+        public FoodModel GetInfo()
+        {
+            return food;
+        }
+
+        private void picFood_MouseEnter(object sender, EventArgs e)
+        {
+            picFood.SizeMode = PictureBoxSizeMode.StretchImage;
+            picFood.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void picFood_MouseLeave(object sender, EventArgs e)
+        {
+            picFood.SizeMode = PictureBoxSizeMode.Zoom;
+            picFood.BorderStyle = BorderStyle.None;
+        }
+
+        private void picFood_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
