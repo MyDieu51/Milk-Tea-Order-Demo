@@ -41,8 +41,8 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.btnESC = new System.Windows.Forms.Button();
-            this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
             this.homeControl1 = new MilkTeaOrderDemo.HomeControl();
+            this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
             this.menuForm1 = new MilkTeaOrderDemo.MenuForm();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
@@ -210,6 +210,13 @@
             this.btnESC.UseVisualStyleBackColor = true;
             this.btnESC.Click += new System.EventHandler(this.btnESC_Click);
             // 
+            // homeControl1
+            // 
+            this.homeControl1.Location = new System.Drawing.Point(251, 58);
+            this.homeControl1.Name = "homeControl1";
+            this.homeControl1.Size = new System.Drawing.Size(1030, 660);
+            this.homeControl1.TabIndex = 4;
+            // 
             // aboutForm1
             // 
             this.aboutForm1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -218,18 +225,11 @@
             this.aboutForm1.Size = new System.Drawing.Size(1030, 660);
             this.aboutForm1.TabIndex = 2;
             // 
-            // homeControl1
-            // 
-            this.homeControl1.Location = new System.Drawing.Point(251, 58);
-            this.homeControl1.Name = "homeControl1";
-            this.homeControl1.Size = new System.Drawing.Size(1030, 660);
-            this.homeControl1.TabIndex = 4;
-            // 
             // menuForm1
             // 
             this.menuForm1.Location = new System.Drawing.Point(250, 58);
             this.menuForm1.Name = "menuForm1";
-            this.menuForm1.Size = new System.Drawing.Size(1030, 647);
+            this.menuForm1.Size = new System.Drawing.Size(1030, 660);
             this.menuForm1.TabIndex = 5;
             // 
             // MainForm

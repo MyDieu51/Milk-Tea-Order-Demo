@@ -44,10 +44,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.invoiceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.foodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panMenu.SuspendLayout();
             this.panListOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceDetailBindingSource)).BeginInit();
@@ -57,9 +59,10 @@
             // 
             this.panMenu.AutoScroll = true;
             this.panMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panMenu.Location = new System.Drawing.Point(0, 2);
+            this.panMenu.Controls.Add(this.panel1);
+            this.panMenu.Location = new System.Drawing.Point(0, 0);
             this.panMenu.Name = "panMenu";
-            this.panMenu.Size = new System.Drawing.Size(718, 645);
+            this.panMenu.Size = new System.Drawing.Size(717, 660);
             this.panMenu.TabIndex = 0;
             // 
             // panListOrder
@@ -75,9 +78,9 @@
             this.panListOrder.Controls.Add(this.label2);
             this.panListOrder.Controls.Add(this.txtTotal);
             this.panListOrder.Controls.Add(this.label1);
-            this.panListOrder.Location = new System.Drawing.Point(718, 0);
+            this.panListOrder.Location = new System.Drawing.Point(717, 0);
             this.panListOrder.Name = "panListOrder";
-            this.panListOrder.Size = new System.Drawing.Size(312, 647);
+            this.panListOrder.Size = new System.Drawing.Size(312, 660);
             this.panListOrder.TabIndex = 1;
             // 
             // dgvOrder
@@ -179,9 +182,9 @@
             this.txtVAT.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtVAT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtVAT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVAT.Location = new System.Drawing.Point(189, 513);
+            this.txtVAT.Location = new System.Drawing.Point(148, 513);
             this.txtVAT.Name = "txtVAT";
-            this.txtVAT.Size = new System.Drawing.Size(100, 19);
+            this.txtVAT.Size = new System.Drawing.Size(141, 19);
             this.txtVAT.TabIndex = 16;
             this.txtVAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -191,18 +194,18 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(14, 514);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 18);
+            this.label2.Size = new System.Drawing.Size(81, 18);
             this.label2.TabIndex = 15;
-            this.label2.Text = "VAT";
+            this.label2.Text = "VAT (10%)";
             // 
             // txtTotal
             // 
             this.txtTotal.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(189, 554);
+            this.txtTotal.Location = new System.Drawing.Point(148, 554);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 24);
+            this.txtTotal.Size = new System.Drawing.Size(141, 24);
             this.txtTotal.TabIndex = 14;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -216,9 +219,14 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Total";
             // 
-            // invoiceDetailBindingSource
+            // panel1
             // 
-            this.invoiceDetailBindingSource.DataSource = typeof(MilkTeaOrderDemo.InvoiceDetail);
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(707, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 660);
+            this.panel1.TabIndex = 0;
             // 
             // foodNameDataGridViewTextBoxColumn
             // 
@@ -241,6 +249,10 @@
             this.totalDataGridViewTextBoxColumn.HeaderText = "Sub Total";
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             // 
+            // invoiceDetailBindingSource
+            // 
+            this.invoiceDetailBindingSource.DataSource = typeof(MilkTeaOrderDemo.InvoiceDetail);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,7 +260,8 @@
             this.Controls.Add(this.panListOrder);
             this.Controls.Add(this.panMenu);
             this.Name = "MenuForm";
-            this.Size = new System.Drawing.Size(1030, 647);
+            this.Size = new System.Drawing.Size(1030, 660);
+            this.panMenu.ResumeLayout(false);
             this.panListOrder.ResumeLayout(false);
             this.panListOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
@@ -275,5 +288,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource invoiceDetailBindingSource;
+        private System.Windows.Forms.Panel panel1;
     }
 }
