@@ -11,16 +11,19 @@ namespace MilkTeaOrderDemo
         public static int ID;
         public int idInvoice, qtyProduct, total;
         public FoodModel food;
+
         public InvoiceDetail()
         {
 
         }
-        public InvoiceDetail(FoodModel food, int qtyproduct, int total)
+
+        public InvoiceDetail(FoodModel food, int qtyproduct)
         {
             this.idInvoice = ++ID;
             this.food = food;
             this.qtyProduct = qtyproduct;
-            this.total = total;
+            this.total = food.Price * qtyproduct;
         }
+
     }
 }

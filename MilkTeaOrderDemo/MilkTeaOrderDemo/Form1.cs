@@ -28,14 +28,14 @@ namespace MilkTeaOrderDemo
         {
             SidePanel.Height = btnMenu.Height;
             SidePanel.Top = btnMenu.Top;
-            menuControl1.BringToFront();
+            menuForm1.BringToFront();
         }
 
         private void DashboardButton_Click(object sender, EventArgs e)
         {
             SidePanel.Height = btnDashboard.Height;
             SidePanel.Top = btnDashboard.Top;
-
+            
         }
 
         private void AboutButton_Click(object sender, EventArgs e)

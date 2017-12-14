@@ -42,8 +42,8 @@
             this.TopPanel = new System.Windows.Forms.Panel();
             this.btnESC = new System.Windows.Forms.Button();
             this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
-            this.menuControl1 = new MilkTeaOrderDemo.MenuControl();
             this.homeControl1 = new MilkTeaOrderDemo.HomeControl();
+            this.menuForm1 = new MilkTeaOrderDemo.MenuForm();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -218,13 +218,6 @@
             this.aboutForm1.Size = new System.Drawing.Size(1030, 660);
             this.aboutForm1.TabIndex = 2;
             // 
-            // menuControl1
-            // 
-            this.menuControl1.Location = new System.Drawing.Point(252, 58);
-            this.menuControl1.Name = "menuControl1";
-            this.menuControl1.Size = new System.Drawing.Size(1030, 660);
-            this.menuControl1.TabIndex = 3;
-            // 
             // homeControl1
             // 
             this.homeControl1.Location = new System.Drawing.Point(251, 58);
@@ -232,14 +225,21 @@
             this.homeControl1.Size = new System.Drawing.Size(1030, 660);
             this.homeControl1.TabIndex = 4;
             // 
+            // menuForm1
+            // 
+            this.menuForm1.Location = new System.Drawing.Point(250, 71);
+            this.menuForm1.Name = "menuForm1";
+            this.menuForm1.Size = new System.Drawing.Size(1030, 647);
+            this.menuForm1.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnESC;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.menuForm1);
             this.Controls.Add(this.homeControl1);
-            this.Controls.Add(this.menuControl1);
             this.Controls.Add(this.aboutForm1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftSidePanel);
@@ -268,8 +268,8 @@
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Label label2;
         private AboutForm aboutForm1;
-        private MenuControl menuControl1;
         private HomeControl homeControl1;
+        private MenuForm menuForm1;
     }
 }
 
