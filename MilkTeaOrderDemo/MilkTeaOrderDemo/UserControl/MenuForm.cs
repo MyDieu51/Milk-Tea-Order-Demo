@@ -28,9 +28,9 @@ namespace MilkTeaOrderDemo
             for (int i = 0; i < listFood.Count; i++)
             {
                 listMenu.Add(new MilkTeaOrderDemo.Menu());
-                listMenu[i].Location = new System.Drawing.Point(20 + i % 4 * 170, 20 + i / 4 * 220);
+                listMenu[i].Location = new Point(20 + i % 4 * 170, 20 + i / 4 * 220);
                 listMenu[i].Name = "menu" + i;
-                listMenu[i].Size = new System.Drawing.Size(150, 200);
+                listMenu[i].Size = new Size(150, 200);
                 listMenu[i].TabIndex = 6;
                 listMenu[i].LoadInfo(listFood[i]);
                 panMenu.Controls.Add(listMenu[i]);

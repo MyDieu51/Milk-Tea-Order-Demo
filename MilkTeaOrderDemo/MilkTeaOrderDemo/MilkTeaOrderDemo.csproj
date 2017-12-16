@@ -56,67 +56,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutForm.cs">
+    <Compile Include="UserControl\AboutForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AboutForm.Designer.cs">
+    <Compile Include="UserControl\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FoodCtrl.cs" />
-    <Compile Include="FoodModel.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Food\FoodCtrl.cs" />
+    <Compile Include="Food\FoodModel.cs" />
+    <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeControl.cs">
+    <Compile Include="UserControl\HomeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomeControl.Designer.cs">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <Compile Include="UserControl\HomeUserControl.Designer.cs">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoice.cs" />
-    <Compile Include="InvoiceCtrl.cs" />
-    <Compile Include="InvoiceDetail.cs" />
-    <Compile Include="Login.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Invoice\Invoice.cs" />
+    <Compile Include="Invoice\InvoiceCtrl.cs" />
+    <Compile Include="Invoice\InvoiceDetail.cs" />
+    <Compile Include="Form\Login\Login.cs" />
+    <Compile Include="Form\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Form\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Menu\Menu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Menu.designer.cs">
+    <Compile Include="Menu\Menu.designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuForm.cs">
+    <Compile Include="UserControl\MenuForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MenuForm.designer.cs">
+    <Compile Include="UserControl\MenuForm.designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderManagement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutForm.resx">
+    <EmbeddedResource Include="UserControl\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeControl.resx">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl\HomeUserControl.resx">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Form\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Menu\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuForm.resx">
+    <EmbeddedResource Include="UserControl\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -143,5 +143,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

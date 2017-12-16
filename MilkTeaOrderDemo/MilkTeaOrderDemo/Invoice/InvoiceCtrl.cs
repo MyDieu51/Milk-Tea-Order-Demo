@@ -9,7 +9,6 @@ namespace MilkTeaOrderDemo
 {
     class InvoiceCtrl
     {
-        private static string pathDetail = "..\\DetailReceiptData.txt";
         private static string path = "..\\ReceiptData.txt";
 
         List<InvoiceDetail> listInvoiceDetail, tempListInvoiceDetail;

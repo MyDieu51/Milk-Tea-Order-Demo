@@ -21,7 +21,7 @@ namespace MilkTeaOrderDemo
         {
             SidePanel.Height = btnHome.Height;
             SidePanel.Top = btnHome.Top;
-            homeControl1.BringToFront();
+            homeUserControl1.BringToFront();
         }
 
         private void MenuButton_Click(object sender, EventArgs e)

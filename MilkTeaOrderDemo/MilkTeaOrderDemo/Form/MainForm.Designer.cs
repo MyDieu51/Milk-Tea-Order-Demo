@@ -41,9 +41,10 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.btnESC = new System.Windows.Forms.Button();
-            this.homeControl1 = new MilkTeaOrderDemo.HomeControl();
+            this.homeControl1 = new MilkTeaOrderDemo.HomeUserControl();
             this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
             this.menuForm1 = new MilkTeaOrderDemo.MenuForm();
+            this.homeUserControl1 = new MilkTeaOrderDemo.HomeUserControl();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -232,14 +233,21 @@
             this.menuForm1.Size = new System.Drawing.Size(1030, 660);
             this.menuForm1.TabIndex = 5;
             // 
+            // homeUserControl1
+            // 
+            this.homeUserControl1.Location = new System.Drawing.Point(249, 57);
+            this.homeUserControl1.Name = "homeUserControl1";
+            this.homeUserControl1.Size = new System.Drawing.Size(1029, 646);
+            this.homeUserControl1.TabIndex = 6;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnESC;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.homeUserControl1);
             this.Controls.Add(this.menuForm1);
-            this.Controls.Add(this.homeControl1);
             this.Controls.Add(this.aboutForm1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftSidePanel);
@@ -268,8 +276,9 @@
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Label label2;
         private AboutForm aboutForm1;
-        private HomeControl homeControl1;
+        private HomeUserControl homeControl1;
         private MenuForm menuForm1;
+        private HomeUserControl homeUserControl1;
     }
 }
 

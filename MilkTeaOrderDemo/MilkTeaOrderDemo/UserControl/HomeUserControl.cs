@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MilkTeaOrderDemo
 {
-    public partial class HomeControl : UserControl
+    public partial class HomeUserControl : UserControl
     {
-        public HomeControl()
+        public HomeUserControl()
         {
             InitializeComponent();
         }
