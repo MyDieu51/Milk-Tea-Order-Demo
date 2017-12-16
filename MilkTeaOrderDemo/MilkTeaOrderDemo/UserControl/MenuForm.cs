@@ -12,7 +12,7 @@ namespace MilkTeaOrderDemo
 {
     public partial class MenuForm : UserControl
     {
-        OrderManagement orderCtrl = new OrderManagement();
+        OrderCtrl orderCtrl = new OrderCtrl();
 
         public MenuForm()
         {
@@ -46,7 +46,29 @@ namespace MilkTeaOrderDemo
 
         private void UpdateOrder(object sender, EventArgs e, FoodModel food)
         {
-            orderCtrl.InputOrder(food, dgvOrder);
+            orderCtrl.InputOrder(food, dgvOrder, txtVAT, txtTotal);
+        }              
+        
+        private void dgvOrder_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                if (int.TryParse(dgvOrder.CurrentRow.Cells[e.ColumnIndex].Value.ToString(), out int newQty))
+                {
+                    orderCtrl.EditOrder(e.RowIndex, newQty, dgvOrder, txtVAT, txtTotal);
+                }
+            }
+        }
+
+        private void btnPrintInvoice_Click(object sender, EventArgs e)
+        {
+            orderCtrl.Confirm();
+        }
+
+        private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgvOrder.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+                orderCtrl.DeleteOrder(e.RowIndex, dgvOrder, txtVAT, txtTotal);
         }
     }
 }

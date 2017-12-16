@@ -11,14 +11,13 @@ namespace MilkTeaOrderDemo
     {
         private static string path = "..\\ReceiptData.txt";
 
-        List<InvoiceDetail> listInvoiceDetail, tempListInvoiceDetail;
+        List<InvoiceDetail> listInvoiceDetail;
         List<Invoice> listReceipt;
         FoodCtrl food_ctrl = new FoodCtrl();
 
         public InvoiceCtrl(FoodCtrl foodCtrl)
         {
-            listInvoiceDetail = new List<InvoiceDetail>();
-            tempListInvoiceDetail = new List<InvoiceDetail>();
+            listInvoiceDetail = new List<InvoiceDetail>();            
             listReceipt = new List<Invoice>();
             food_ctrl = foodCtrl;
             if (listInvoiceDetail.Count == 0)
@@ -26,50 +25,11 @@ namespace MilkTeaOrderDemo
             else InvoiceDetail.ID = listInvoiceDetail[listInvoiceDetail.Count - 1].idInvoice;
         }
 
-        public void CreateReceiptDetailInfo(FoodModel food, int qtyProduct, DataGridView dgv)
+        public void ConfirmPayment(Invoice invoice)
         {
-            int total = qtyProduct * food_ctrl.FindFood(food.IdFood).Price;
-            InvoiceDetail tempreceiptdetail = new InvoiceDetail((food_ctrl.FindFood(food.IdFood)), qtyProduct);
-            tempListInvoiceDetail.Add(tempreceiptdetail);
-            dgv.DataSource = null;
-            dgv.DataSource = tempListInvoiceDetail;
+            invoice.payment = true;
+            //Lenh ghi du lieu vao text
+            MessageBox.Show("Đã lưu thành công!");
         }
-
-        public void CreateReceiptInfo(int idMember, int idStaff)
-        {
-            int total_receipt = 0;
-            for (int i = 0; i < tempListInvoiceDetail.Count; i++)
-            {
-                total_receipt += tempListInvoiceDetail[i].total;
-            }
-            Invoice receipt = new Invoice(tempListInvoiceDetail);
-            listReceipt.Add(receipt);
-            tempListInvoiceDetail = new List<InvoiceDetail>();
-        }
-
-        //public InvoiceDetail FindReceipt(int idreceipt)
-        //{
-        //    for (int i = 0; i < listInvoiceDetail.Count; i++)
-        //    {
-        //        if (listInvoiceDetail[i].idRecept == idreceipt)
-        //            return listInvoiceDetail[i];
-        //    }
-        //    InvoiceDetail receipt = new InvoiceDetail();
-        //    return receipt;
-        //}
-
-        //public void DeleteReceipt(int id)
-        //{
-        //    InvoiceDetail receipt = FindReceipt(id);
-        //    listInvoiceDetail.Remove(receipt);
-        //}
-
-        //public void EditReceipt(int id, int idStaff, int idProduct, int qtyProduct)
-        //{
-        //    int index = listInvoiceDetail.IndexOf(FindReceipt(id));
-        //    listInvoiceDetail[index].staff = staff_manage.FindStaff(idStaff);
-        //    listInvoiceDetail[index].product = menu_manage.FindProduct(idProduct);
-        //    listInvoiceDetail[index].total = qtyProduct * menu_manage.FindProduct(idProduct).sellValue;
-        //}
     }
 }

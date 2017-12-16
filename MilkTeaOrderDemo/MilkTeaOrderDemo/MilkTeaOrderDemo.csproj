@@ -98,7 +98,7 @@
     <Compile Include="UserControl\MenuForm.designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderManagement.cs" />
+    <Compile Include="OrderCtrl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="UserControl\AboutForm.resx">
