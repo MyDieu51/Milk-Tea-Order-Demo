@@ -24,7 +24,7 @@ namespace MilkTeaOrderDemo
 
         public Food()
         {
-            this.idFood = iD++;
+            
         }
 
         public Food(string name, int price, int basicPrice, string picLocal)

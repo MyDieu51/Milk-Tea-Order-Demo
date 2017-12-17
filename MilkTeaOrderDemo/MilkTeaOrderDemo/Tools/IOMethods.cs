@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
+using System.ComponentModel;
 
 namespace MilkTeaOrderDemo
 {
@@ -36,7 +37,7 @@ namespace MilkTeaOrderDemo
             }
         }
 
-        public void ReadData<T>(string path, ref List<T> list)
+        public void ReadData<T>(string path, ref BindingList<T> list)
         {
             if (File.Exists(path))
             {
@@ -51,7 +52,7 @@ namespace MilkTeaOrderDemo
             }
         }
 
-        public void EditData<T>(string path, List<T> list)
+        public void EditData<T>(string path, BindingList<T> list)
         {
             string tempfile = Path.GetTempFileName();
             using (var sw = new StreamWriter(tempfile))

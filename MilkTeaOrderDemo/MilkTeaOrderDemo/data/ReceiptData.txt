@@ -1,0 +1,1 @@
+﻿{"idInvoice":0,"total":49500.0,"vat":4500.0,"listinvoiceDetail":[{"idInvoice":1,"qtyProduct":3,"total":45000,"food":{"IdFood":0,"Name":"kimchi","Price":15000,"BasicPrice":10000,"PicLocal":"..\\..\\pic\\Kimchi.png"},"FoodName":"kimchi","Quantity":3,"Total":45000}],"date":"2017-12-17T00:00:00+07:00","time":"0001-01-01T00:00:00","payment":true}

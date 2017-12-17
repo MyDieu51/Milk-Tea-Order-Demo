@@ -27,16 +27,16 @@ namespace MilkTeaOrderDemo
 
         public void LoadInfo()
         {
-            List<Food> listFood = orderCtrl.foodCtrl.ListFoods;
+            //BindingList<Food> listFood = orderCtrl.foodCtrl.ListFoods;
             List<Menu> listMenu = new List<Menu>();
-            for (int i = 0; i < listFood.Count; i++)
+            for (int i = 0; i < orderCtrl.foodCtrl.ListFoods.Count; i++)
             {
                 listMenu.Add(new MilkTeaOrderDemo.Menu());
                 listMenu[i].Location = new Point(20 + i % 4 * 170, 20 + i / 4 * 220);
                 listMenu[i].Name = "menu" + i;
                 listMenu[i].Size = new Size(150, 200);
                 listMenu[i].TabIndex = 6;
-                listMenu[i].LoadInfo(listFood[i]);
+                listMenu[i].LoadInfo(orderCtrl.foodCtrl.ListFoods[i]);
                 panMenu.Controls.Add(listMenu[i]);
                 listMenu[i].PicClick += UpdateOrder;
             }

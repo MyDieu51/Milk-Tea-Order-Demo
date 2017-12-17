@@ -1,0 +1,1 @@
+{"IdFood":1,"Name":"tteokbokki","Price":30000,"BasicPrice":20000,"PicLocal":"..\\..\\pic\\Tteokbokki.png"}

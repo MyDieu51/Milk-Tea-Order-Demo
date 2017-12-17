@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,16 +10,16 @@ namespace MilkTeaOrderDemo
 {
     class InvoiceCtrl
     {
-        private static string path = "..\\ReceiptData.txt";
+        private static string path = "..\\..\\data\\ReceiptData.txt";
 
-        List<InvoiceDetail> listInvoiceDetail;
-        List<Invoice> listInvoice;
+        BindingList<InvoiceDetail> listInvoiceDetail;
+        BindingList<Invoice> listInvoice;
         FoodCtrl food_ctrl = new FoodCtrl();
 
         public InvoiceCtrl(FoodCtrl foodCtrl)
         {
-            listInvoiceDetail = new List<InvoiceDetail>();            
-            listInvoice = new List<Invoice>();
+            listInvoiceDetail = new BindingList<InvoiceDetail>();            
+            listInvoice = new BindingList<Invoice>();
             food_ctrl = foodCtrl;
             IOMethods.Instance.ReadData<Invoice>(path, ref listInvoice);
             if (listInvoice.Count != 0)
