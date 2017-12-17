@@ -41,10 +41,10 @@ namespace MilkTeaOrderDemo
             menuForm1.BringToFront();
         }
 
-        private void SettingButton_Click(object sender, EventArgs e)
+        private void OptionButton_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = btnDashboard.Height;
-            SidePanel.Top = btnDashboard.Top;
+            SidePanel.Height = btnOption.Height;
+            SidePanel.Top = btnOption.Top;
             editFoodForm1.LoadMenu();
             editFoodForm1.BringToFront();
         }
@@ -59,6 +59,23 @@ namespace MilkTeaOrderDemo
         private void btnESC_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Control_KeyUp (object sender,KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up) 
+            {
+                this.SelectNextControl((UserControl)sender, true, false, true, true);
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                this.SelectNextControl((UserControl)sender, false, false, true, true);
+            }
         }
     }
 }

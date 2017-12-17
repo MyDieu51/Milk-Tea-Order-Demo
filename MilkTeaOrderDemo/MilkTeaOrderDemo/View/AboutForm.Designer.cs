@@ -59,6 +59,7 @@
             this.btnFacebook.Size = new System.Drawing.Size(61, 59);
             this.btnFacebook.TabIndex = 1;
             this.btnFacebook.UseVisualStyleBackColor = true;
+            this.btnFacebook.Click += new System.EventHandler(this.btnFacebook_Click);
             // 
             // btnIns
             // 
@@ -70,6 +71,7 @@
             this.btnIns.Size = new System.Drawing.Size(61, 59);
             this.btnIns.TabIndex = 1;
             this.btnIns.UseVisualStyleBackColor = true;
+            this.btnIns.Click += new System.EventHandler(this.btnIns_Click);
             // 
             // btnEmail
             // 
@@ -92,7 +94,7 @@
             this.Controls.Add(this.btnFacebook);
             this.Controls.Add(this.label1);
             this.Name = "AboutForm";
-            this.Size = new System.Drawing.Size(1030, 660);
+            this.Size = new System.Drawing.Size(1030, 663);
             this.ResumeLayout(false);
             this.PerformLayout();
 

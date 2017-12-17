@@ -16,12 +16,11 @@ namespace MilkTeaOrderDemo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //DialogResult result;
-            //using (var loginform = new LoginForm())
-            //    result = loginform.ShowDialog();
-            //if (result == DialogResult.OK)
-            //    Application.Run(new MainForm());
-            Application.Run(new MainForm());
+            DialogResult result;
+            using (var loginform = new LoginForm())
+                result = loginform.ShowDialog();
+            if (result == DialogResult.OK)
+                Application.Run(new MainForm());
         }
     }
 }

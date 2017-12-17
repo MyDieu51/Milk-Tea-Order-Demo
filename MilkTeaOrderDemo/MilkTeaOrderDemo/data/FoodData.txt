@@ -1,1 +1,3 @@
-{"IdFood":1,"Name":"tteokbokki","Price":30000,"BasicPrice":20000,"PicLocal":"..\\..\\pic\\Tteokbokki.png"}
+{"IdFood":1,"Name":"Tteokbokki","Price":30000,"BasicPrice":20000,"PicLocal":"..\\..\\pic\\Tteokbokki.png"}
+{"IdFood":2,"Name":"Spicy Chicken and Cheese","Price":90000,"BasicPrice":40000,"PicLocal":"..\\..\\pic\\maxresdefault.jpg"}
+{"IdFood":3,"Name":"Jajangmyeon","Price":40000,"BasicPrice":20000,"PicLocal":"..\\..\\pic\\jjajangmyeon-plate.jpg"}

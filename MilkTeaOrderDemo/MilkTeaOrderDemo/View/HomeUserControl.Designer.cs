@@ -299,13 +299,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // HomeControl
+            // HomeUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "HomeControl";
-            this.Size = new System.Drawing.Size(1029, 646);
+            this.Name = "HomeUserControl";
+            this.Size = new System.Drawing.Size(1030, 663);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

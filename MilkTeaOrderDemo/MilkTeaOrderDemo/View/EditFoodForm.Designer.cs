@@ -54,6 +54,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foodModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodModelBindingSource)).BeginInit();
@@ -112,6 +113,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(305, 150);
+            this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(150, 27);
             this.txtName.TabIndex = 6;
@@ -143,13 +145,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
             // 
             // btnAddNew
             // 
             this.btnAddNew.FlatAppearance.BorderSize = 0;
             this.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.Image")));
-            this.btnAddNew.Location = new System.Drawing.Point(231, 342);
+            this.btnAddNew.Location = new System.Drawing.Point(254, 324);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(47, 47);
             this.btnAddNew.TabIndex = 11;
@@ -193,7 +196,7 @@
             this.dgvMenu.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMenu.EnableHeadersVisualStyles = false;
             this.dgvMenu.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvMenu.Location = new System.Drawing.Point(152, 417);
+            this.dgvMenu.Location = new System.Drawing.Point(168, 395);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.ReadOnly = true;
             this.dgvMenu.RowHeadersVisible = false;
@@ -227,7 +230,7 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(713, 342);
+            this.btnDelete.Location = new System.Drawing.Point(734, 324);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(47, 47);
             this.btnDelete.TabIndex = 13;
@@ -239,7 +242,7 @@
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(472, 342);
+            this.btnEdit.Location = new System.Drawing.Point(494, 324);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(47, 47);
             this.btnEdit.TabIndex = 12;
@@ -293,11 +296,22 @@
             // 
             this.foodModelBindingSource.DataSource = typeof(MilkTeaOrderDemo.Food);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(182, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(466, 38);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "ADD, EDIT AND DELETE RECIPE";
+            // 
             // EditFoodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblID);
@@ -346,5 +360,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource foodModelBindingSource;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

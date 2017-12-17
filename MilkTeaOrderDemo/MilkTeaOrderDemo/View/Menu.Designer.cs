@@ -58,13 +58,16 @@
             // 
             // lblName
             // 
+            this.lblName.AllowDrop = true;
+            this.lblName.AutoEllipsis = true;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(11, 138);
+            this.lblName.MaximumSize = new System.Drawing.Size(120, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(67, 18);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "lbName";
+            this.lblName.Text = "lbName\r\n";
             // 
             // picFood
             // 

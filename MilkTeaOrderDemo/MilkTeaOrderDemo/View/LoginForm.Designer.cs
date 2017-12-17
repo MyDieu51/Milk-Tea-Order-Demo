@@ -156,11 +156,13 @@
             this.txtUsername.CustomButton.Visible = false;
             this.txtUsername.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtUsername.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtUsername.Lines = new string[0];
+            this.txtUsername.Lines = new string[] {
+        "admin"};
             this.txtUsername.Location = new System.Drawing.Point(244, 152);
             this.txtUsername.MaxLength = 15;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PromptText = "Enter username...";
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
@@ -168,6 +170,7 @@
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(180, 30);
             this.txtUsername.TabIndex = 2;
+            this.txtUsername.Text = "admin";
             this.txtUsername.UseCustomBackColor = true;
             this.txtUsername.UseCustomForeColor = true;
             this.txtUsername.UseSelectable = true;
@@ -192,11 +195,13 @@
             this.txtPassword.CustomButton.Visible = false;
             this.txtPassword.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtPassword.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtPassword.Lines = new string[0];
+            this.txtPassword.Lines = new string[] {
+        "admin"};
             this.txtPassword.Location = new System.Drawing.Point(244, 200);
             this.txtPassword.MaxLength = 8;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
+            this.txtPassword.PromptText = "Enter password...";
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
@@ -204,6 +209,7 @@
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(180, 30);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "admin";
             this.txtPassword.UseCustomBackColor = true;
             this.txtPassword.UseCustomForeColor = true;
             this.txtPassword.UseSelectable = true;
