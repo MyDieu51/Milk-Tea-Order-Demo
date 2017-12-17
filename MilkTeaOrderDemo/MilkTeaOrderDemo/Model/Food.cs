@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MilkTeaOrderDemo
 {
-    public class FoodModel
+    public class Food
     {
         private static int iD = 0;
         private int idFood;
@@ -22,12 +22,12 @@ namespace MilkTeaOrderDemo
         public int BasicPrice { get => basicPrice; set => basicPrice = value; }
         public string PicLocal { get => picLocal; set => picLocal = value; }
 
-        public FoodModel()
+        public Food()
         {
             this.idFood = iD++;
         }
 
-        public FoodModel(string name, int price, int basicPrice, string picLocal)
+        public Food(string name, int price, int basicPrice, string picLocal)
         {
             this.idFood = iD++;
             this.Name = name;
@@ -36,7 +36,7 @@ namespace MilkTeaOrderDemo
             this.PicLocal = picLocal;
         }
 
-        public FoodModel(FoodModel Food)
+        public Food(Food Food)
         {
             this.Name = Food.Name;
             this.Price = Food.Price;

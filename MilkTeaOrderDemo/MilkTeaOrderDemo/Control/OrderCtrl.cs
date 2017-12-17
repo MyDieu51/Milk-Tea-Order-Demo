@@ -16,11 +16,15 @@ namespace MilkTeaOrderDemo
         public OrderCtrl()
         {
             tempInvoice = new Invoice();
-            foodCtrl = new FoodCtrl();
             invoiceCtrl = new InvoiceCtrl(foodCtrl);
         }
 
-        public void InputOrder(FoodModel food, DataGridView dgvListOrder, TextBox txtVAT, TextBox txtTotal)
+        public void Inil(FoodCtrl foodCtrl)
+        {
+            this.foodCtrl = foodCtrl;
+        }
+
+        public void InputOrder(Food food, DataGridView dgvListOrder, TextBox txtVAT, TextBox txtTotal)
         {
             InvoiceDetail tempreceiptdetail = new InvoiceDetail(food, 1);
             tempInvoice.listinvoiceDetail.Add(tempreceiptdetail);

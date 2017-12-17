@@ -12,7 +12,7 @@ namespace MilkTeaOrderDemo
 {
     public partial class Menu : UserControl
     {
-        public delegate void OrderEventHandler(object sender, EventArgs e, FoodModel food);
+        public delegate void OrderEventHandler(object sender, EventArgs e, Food food);
         public event OrderEventHandler PicDoubleClick;
 
         public Menu()
@@ -20,9 +20,9 @@ namespace MilkTeaOrderDemo
             InitializeComponent();
         }
 
-        FoodModel food = new FoodModel();
+        Food food = new Food();
 
-        public void LoadInfo(FoodModel input)
+        public void LoadInfo(Food input)
         {
             picFood.ImageLocation = input.PicLocal;
             lblName.Text = input.Name;
@@ -30,7 +30,7 @@ namespace MilkTeaOrderDemo
             food = input;
         }
 
-        public FoodModel GetInfo()
+        public Food GetInfo()
         {
             return food;
         }

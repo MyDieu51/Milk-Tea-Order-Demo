@@ -17,13 +17,17 @@ namespace MilkTeaOrderDemo
         public MenuForm()
         {
             InitializeComponent();
-            LoadMenu();
-            LoadTime();
         }
 
-        private void LoadMenu()
+        public void Inil(FoodCtrl foodCtrl)
         {
-            List<FoodModel> listFood = orderCtrl.foodCtrl.ListFoods;
+            orderCtrl.Inil(foodCtrl);
+            LoadInfo();
+        }
+
+        private void LoadInfo()
+        {
+            List<Food> listFood = orderCtrl.foodCtrl.ListFoods;
             List<Menu> listMenu = new List<Menu>();
             for (int i = 0; i < listFood.Count; i++)
             {
@@ -36,15 +40,11 @@ namespace MilkTeaOrderDemo
                 panMenu.Controls.Add(listMenu[i]);
                 listMenu[i].PicDoubleClick += UpdateOrder;
             }
-        }
-
-        private void LoadTime()
-        {
             txtDate.Text = DateTime.Now.ToShortDateString();
             txtTime.Text = DateTime.Now.ToLongTimeString();
         }
 
-        private void UpdateOrder(object sender, EventArgs e, FoodModel food)
+        private void UpdateOrder(object sender, EventArgs e, Food food)
         {
             orderCtrl.InputOrder(food, dgvOrder, txtVAT, txtTotal);
         }              

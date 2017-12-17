@@ -15,6 +15,15 @@ namespace MilkTeaOrderDemo
         public MainForm()
         {
             InitializeComponent();
+            Inil();
+            homeUserControl1.BringToFront();
+        }
+
+        public void Inil()
+        {
+            FoodCtrl foodCtrl = new FoodCtrl();
+            menuForm1.Inil(foodCtrl);
+            editFoodForm1.Inil(foodCtrl);
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -35,7 +44,7 @@ namespace MilkTeaOrderDemo
         {
             SidePanel.Height = btnDashboard.Height;
             SidePanel.Top = btnDashboard.Top;
-            
+            editFoodForm1.BringToFront();
         }
 
         private void AboutButton_Click(object sender, EventArgs e)

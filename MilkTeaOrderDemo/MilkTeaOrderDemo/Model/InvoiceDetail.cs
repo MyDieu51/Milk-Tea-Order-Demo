@@ -10,7 +10,7 @@ namespace MilkTeaOrderDemo
     {
         public static int ID;
         public int idInvoice, qtyProduct, total;
-        public FoodModel food;
+        public Food food;
 
         public string FoodName { get => food.Name; }
 
@@ -23,7 +23,7 @@ namespace MilkTeaOrderDemo
 
         }
 
-        public InvoiceDetail(FoodModel food, int qtyFood)
+        public InvoiceDetail(Food food, int qtyFood)
         {
             this.idInvoice = ++ID;
             this.food = food;

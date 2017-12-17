@@ -42,6 +42,9 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -56,67 +59,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserControl\AboutForm.cs">
+    <Compile Include="View\EditFoodForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl\AboutForm.Designer.cs">
+    <Compile Include="View\EditFoodForm.designer.cs">
+      <DependentUpon>EditFoodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOMethods.cs" />
+    <Compile Include="View\AboutForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Food\FoodCtrl.cs" />
-    <Compile Include="Food\FoodModel.cs" />
-    <Compile Include="Form\MainForm.cs">
+    <Compile Include="Control\FoodCtrl.cs" />
+    <Compile Include="Model\Food.cs" />
+    <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\MainForm.Designer.cs">
+    <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\HomeUserControl.cs">
+    <Compile Include="View\HomeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl\HomeUserControl.Designer.cs">
+    <Compile Include="View\HomeUserControl.Designer.cs">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoice\Invoice.cs" />
-    <Compile Include="Invoice\InvoiceCtrl.cs" />
-    <Compile Include="Invoice\InvoiceDetail.cs" />
-    <Compile Include="Form\Login\Login.cs" />
-    <Compile Include="Form\Login\LoginForm.cs">
+    <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Control\InvoiceCtrl.cs" />
+    <Compile Include="Model\InvoiceDetail.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Login\LoginForm.Designer.cs">
+    <Compile Include="View\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\Menu.cs">
+    <Compile Include="View\Menu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Menu\Menu.designer.cs">
+    <Compile Include="View\Menu.designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\MenuForm.cs">
+    <Compile Include="View\MenuForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl\MenuForm.designer.cs">
+    <Compile Include="View\MenuForm.designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderCtrl.cs" />
+    <Compile Include="Control\OrderCtrl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UserControl\AboutForm.resx">
+    <EmbeddedResource Include="View\EditFoodForm.resx">
+      <DependentUpon>EditFoodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\MainForm.resx">
+    <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\HomeUserControl.resx">
+    <EmbeddedResource Include="View\HomeUserControl.resx">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Login\LoginForm.resx">
+    <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\Menu.resx">
+    <EmbeddedResource Include="View\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\MenuForm.resx">
+    <EmbeddedResource Include="View\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -129,6 +142,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FoodModel.datasource" />
     <None Include="Properties\DataSources\InvoiceDetail.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

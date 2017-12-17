@@ -45,6 +45,7 @@
             this.aboutForm1 = new MilkTeaOrderDemo.AboutForm();
             this.menuForm1 = new MilkTeaOrderDemo.MenuForm();
             this.homeUserControl1 = new MilkTeaOrderDemo.HomeUserControl();
+            this.editFoodForm1 = new MilkTeaOrderDemo.EditFoodForm();
             this.LeftSidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -67,7 +68,7 @@
             // 
             // LogoPanel
             // 
-            this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(245)))), ((int)(((byte)(108)))));
+            this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
             this.LogoPanel.Controls.Add(this.label2);
             this.LogoPanel.Controls.Add(this.label1);
             this.LogoPanel.Controls.Add(this.pictureBox6);
@@ -112,7 +113,7 @@
             // 
             // SidePanel
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(225)))), ((int)(((byte)(24)))));
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
             this.SidePanel.Location = new System.Drawing.Point(0, 151);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 88);
@@ -147,7 +148,7 @@
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(238, 88);
             this.btnDashboard.TabIndex = 2;
-            this.btnDashboard.Text = "DASHBOARD  ";
+            this.btnDashboard.Text = "SETTING";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.DashboardButton_Click);
@@ -188,7 +189,7 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(245)))), ((int)(((byte)(108)))));
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
             this.TopPanel.Controls.Add(this.btnESC);
             this.TopPanel.Location = new System.Drawing.Point(250, 5);
             this.TopPanel.Name = "TopPanel";
@@ -240,12 +241,21 @@
             this.homeUserControl1.Size = new System.Drawing.Size(1029, 646);
             this.homeUserControl1.TabIndex = 6;
             // 
+            // editFoodForm1
+            // 
+            this.editFoodForm1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.editFoodForm1.Location = new System.Drawing.Point(251, 57);
+            this.editFoodForm1.Name = "editFoodForm1";
+            this.editFoodForm1.Size = new System.Drawing.Size(1030, 663);
+            this.editFoodForm1.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnESC;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.editFoodForm1);
             this.Controls.Add(this.homeUserControl1);
             this.Controls.Add(this.menuForm1);
             this.Controls.Add(this.aboutForm1);
@@ -279,6 +289,7 @@
         private HomeUserControl homeControl1;
         private MenuForm menuForm1;
         private HomeUserControl homeUserControl1;
+        private EditFoodForm editFoodForm1;
     }
 }
 
