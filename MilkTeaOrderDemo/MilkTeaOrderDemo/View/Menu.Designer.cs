@@ -71,6 +71,7 @@
             this.picFood.Location = new System.Drawing.Point(11, 3);
             this.picFood.Name = "picFood";
             this.picFood.Size = new System.Drawing.Size(128, 128);
+            this.picFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFood.TabIndex = 0;
             this.picFood.TabStop = false;
             this.picFood.Click += new System.EventHandler(this.picFood_Click);

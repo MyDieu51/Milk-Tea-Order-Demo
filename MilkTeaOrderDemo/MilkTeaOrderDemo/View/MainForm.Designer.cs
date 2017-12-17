@@ -151,7 +151,7 @@
             this.btnDashboard.Text = "SETTING";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.DashboardButton_Click);
+            this.btnDashboard.Click += new System.EventHandler(this.SettingButton_Click);
             // 
             // btnMenu
             // 

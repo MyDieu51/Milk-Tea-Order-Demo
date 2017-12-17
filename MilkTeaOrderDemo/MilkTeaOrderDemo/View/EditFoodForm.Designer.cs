@@ -48,11 +48,12 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.foodModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foodModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodModelBindingSource)).BeginInit();
@@ -120,12 +121,12 @@
             this.btnChoosePic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
             this.btnChoosePic.FlatAppearance.BorderSize = 0;
             this.btnChoosePic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChoosePic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChoosePic.Location = new System.Drawing.Point(742, 178);
+            this.btnChoosePic.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoosePic.Location = new System.Drawing.Point(752, 174);
             this.btnChoosePic.Name = "btnChoosePic";
             this.btnChoosePic.Size = new System.Drawing.Size(100, 40);
             this.btnChoosePic.TabIndex = 8;
-            this.btnChoosePic.Text = "Choose";
+            this.btnChoosePic.Text = "Browse File";
             this.btnChoosePic.UseVisualStyleBackColor = false;
             this.btnChoosePic.Click += new System.EventHandler(this.btnChoosePic_Click);
             // 
@@ -136,9 +137,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(569, 129);
+            this.pictureBox1.Location = new System.Drawing.Point(599, 127);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
@@ -244,9 +246,16 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // foodModelBindingSource
+            // label4
             // 
-            this.foodModelBindingSource.DataSource = typeof(MilkTeaOrderDemo.Food);
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(566, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(198, 21);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Please choose an image";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -280,12 +289,17 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 150;
             // 
+            // foodModelBindingSource
+            // 
+            this.foodModelBindingSource.DataSource = typeof(MilkTeaOrderDemo.Food);
+            // 
             // EditFoodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.txtID);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.btnDelete);
@@ -331,5 +345,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource foodModelBindingSource;
+        private System.Windows.Forms.Label label4;
     }
 }

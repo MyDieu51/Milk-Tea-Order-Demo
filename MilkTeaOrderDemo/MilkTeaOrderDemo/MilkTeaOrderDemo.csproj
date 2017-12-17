@@ -65,7 +65,7 @@
     <Compile Include="View\EditFoodForm.designer.cs">
       <DependentUpon>EditFoodForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IOMethods.cs" />
+    <Compile Include="Tools\IOMethods.cs" />
     <Compile Include="View\AboutForm.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -25,7 +25,7 @@ namespace MilkTeaOrderDemo
             LoadInfo();
         }
 
-        private void LoadInfo()
+        public void LoadInfo()
         {
             List<Food> listFood = orderCtrl.foodCtrl.ListFoods;
             List<Menu> listMenu = new List<Menu>();
@@ -38,7 +38,7 @@ namespace MilkTeaOrderDemo
                 listMenu[i].TabIndex = 6;
                 listMenu[i].LoadInfo(listFood[i]);
                 panMenu.Controls.Add(listMenu[i]);
-                listMenu[i].PicDoubleClick += UpdateOrder;
+                listMenu[i].PicClick += UpdateOrder;
             }
             txtDate.Text = DateTime.Now.ToShortDateString();
             txtTime.Text = DateTime.Now.ToLongTimeString();

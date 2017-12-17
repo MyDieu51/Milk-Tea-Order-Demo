@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace MilkTeaOrderDemo
             listFoods = new List<Food>();
             IOMethods.Instance.ReadData<Food>(path, ref listFoods);
             if (listFoods.Count != 0)
-                Food.ID = listFoods[listFoods.Count - 1].IdFood - 1;            
+                Food.ID = listFoods[listFoods.Count - 1].IdFood;            
         }
 
         public void CreateFood(string name, int price, int basicPrice, string picLocal, DataGridView dgvMenu)
@@ -57,6 +58,7 @@ namespace MilkTeaOrderDemo
 
         public void DeleteFoodInfo(int index, DataGridView dgvMenu)
         {
+            //File.Delete(listFoods[index].PicLocal);
             listFoods.RemoveAt(index);
             IOMethods.Instance.EditData<Food>(path, listFoods);
             dgvMenu.DataSource = null;

@@ -13,7 +13,7 @@ namespace MilkTeaOrderDemo
     public partial class Menu : UserControl
     {
         public delegate void OrderEventHandler(object sender, EventArgs e, Food food);
-        public event OrderEventHandler PicDoubleClick;
+        public event OrderEventHandler PicClick;
 
         public Menu()
         {
@@ -49,8 +49,8 @@ namespace MilkTeaOrderDemo
 
         private void picFood_Click(object sender, EventArgs e)
         {
-            if (this.PicDoubleClick != null)
-                this.PicDoubleClick(this, e, food);
+            if (this.PicClick != null)
+                this.PicClick(this, e, food);
         }
     }
 }

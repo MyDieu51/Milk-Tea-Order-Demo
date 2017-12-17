@@ -14,10 +14,11 @@ namespace MilkTeaOrderDemo
     public partial class EditFoodForm : UserControl
     {
         FoodCtrl foodCtrl;
-
+        int index;
+        
         public EditFoodForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         public void Inil(FoodCtrl foodCtrl)
@@ -28,7 +29,10 @@ namespace MilkTeaOrderDemo
 
         public void LoadMenu()
         {
-            txtID.Text = Food.ID.ToString();
+            if (foodCtrl.ListFoods.Count != 0)
+                txtID.Text = (foodCtrl.ListFoods[foodCtrl.ListFoods.Count - 1].IdFood + 1).ToString();
+            else txtID.Text = 0.ToString();
+            //txtID.Text = Food.ID.ToString();
             dgvMenu.DataSource = null;
             dgvMenu.DataSource = foodCtrl.ListFoods;
         }
@@ -51,27 +55,42 @@ namespace MilkTeaOrderDemo
                 string newLocation = Path.Combine("..\\..\\pic", Path.GetFileName(fulllocimage));
                 File.Copy(fulllocimage, newLocation);
                 foodCtrl.CreateFood(txtName.Text, price, basicPrice, newLocation, dgvMenu);
+                txtID.Text = (foodCtrl.ListFoods[foodCtrl.ListFoods.Count - 1].IdFood + 1).ToString();
+                txtName.Text = null;
+                txtBasicPrice.Text = null;
+                txtPrice.Text = null;
+                pictureBox1.Image = null;
             }
             else MessageBox.Show("Vui lòng nhập lại đúng thông tin!");
+
         }
 
         private void dgvMenu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            foodCtrl.LoadFoodInfo(e.RowIndex, txtID, txtName, txtPrice, txtBasicPrice, pictureBox1);
+            index = e.RowIndex;
+            foodCtrl.LoadFoodInfo(index, txtID, txtName, txtPrice, txtBasicPrice, pictureBox1);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (int.TryParse(txtPrice.Text, out int price) && int.TryParse(txtPrice.Text, out int basicPrice))
             {
+                string fulllocimage = openFileDialog1.FileName;
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    string fulllocimage = openFileDialog1.FileName;
                     string newLocation = Path.Combine("..\\..\\pic", Path.GetFileName(fulllocimage));
                     File.Copy(fulllocimage, newLocation);
                     foodCtrl.EditFoodInfo(int.Parse(txtID.Text), txtName.Text, price, price, newLocation, dgvMenu);
                 }
+                else foodCtrl.EditFoodInfo(int.Parse(txtID.Text), txtName.Text, price, price, fulllocimage, dgvMenu);
+
             }
+            else MessageBox.Show("Vui lòng nhập lại đúng thông tin!");
+            txtID.Text = (foodCtrl.ListFoods[foodCtrl.ListFoods.Count - 1].IdFood + 1).ToString();
+            txtName.Text = null;
+            txtBasicPrice.Text = null;
+            txtPrice.Text = null;
+            pictureBox1.Image = null;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -81,6 +100,13 @@ namespace MilkTeaOrderDemo
             if (confirm == DialogResult.Yes)
                 foodCtrl.DeleteFoodInfo(int.Parse(txtID.Text), dgvMenu);
             else return;
-        }        
+            if (foodCtrl.ListFoods.Count != 0)
+                txtID.Text = (foodCtrl.ListFoods[foodCtrl.ListFoods.Count - 1].IdFood + 1).ToString();
+            else txtID.Text = 0.ToString();
+            txtName.Text = null;
+            txtBasicPrice.Text = null;
+            txtPrice.Text = null;
+            pictureBox1.Image = null;
+        }
     }
 }
