@@ -105,5 +105,10 @@ namespace MilkTeaOrderDemo
             pictureBox1.ImageLocation = "";
             openFileDialog1.Reset();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+        }
     }
 }

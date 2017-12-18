@@ -27,7 +27,6 @@ namespace MilkTeaOrderDemo
 
         public void LoadInfo()
         {
-            //BindingList<Food> listFood = orderCtrl.foodCtrl.ListFoods;
             List<Menu> listMenu = new List<Menu>();
             for (int i = 0; i < orderCtrl.foodCtrl.ListFoods.Count; i++)
             {
@@ -57,6 +56,7 @@ namespace MilkTeaOrderDemo
                 {
                     orderCtrl.EditOrder(e.RowIndex, newQty, dgvOrder, txtVAT, txtTotal);
                 }
+                else MessageBox.Show("Please try again! Error: Wrong type of information");
             }
         }
 

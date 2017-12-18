@@ -51,8 +51,8 @@ namespace MilkTeaOrderDemo
         {
             dgv.DataSource = null;
             dgv.DataSource = tempInvoice.listinvoiceDetail;
-            txtVAT.Text = tempInvoice.vat.ToString();
-            txtTotal.Text = tempInvoice.total.ToString();
+            txtVAT.Text = String.Format("{0:#,#}", tempInvoice.vat);
+            txtTotal.Text = String.Format("{0:#,#}", tempInvoice.total);
         }
 
         public void UpdateInvoice()
