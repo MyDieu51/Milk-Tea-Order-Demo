@@ -35,7 +35,12 @@
             this.panMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panListOrder = new System.Windows.Forms.Panel();
+            this.btnPrintInvoice = new System.Windows.Forms.Button();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
+            this.foodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.invoiceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.txtTime = new System.Windows.Forms.TextBox();
@@ -46,11 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.foodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnPrintInvoice = new System.Windows.Forms.Button();
             this.panMenu.SuspendLayout();
             this.panListOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
@@ -94,6 +94,20 @@
             this.panListOrder.Name = "panListOrder";
             this.panListOrder.Size = new System.Drawing.Size(312, 660);
             this.panListOrder.TabIndex = 1;
+            // 
+            // btnPrintInvoice
+            // 
+            this.btnPrintInvoice.BackColor = System.Drawing.Color.Khaki;
+            this.btnPrintInvoice.FlatAppearance.BorderSize = 0;
+            this.btnPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintInvoice.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintInvoice.Location = new System.Drawing.Point(117, 595);
+            this.btnPrintInvoice.Name = "btnPrintInvoice";
+            this.btnPrintInvoice.Size = new System.Drawing.Size(75, 40);
+            this.btnPrintInvoice.TabIndex = 22;
+            this.btnPrintInvoice.Text = "Print";
+            this.btnPrintInvoice.UseVisualStyleBackColor = false;
+            this.btnPrintInvoice.Click += new System.EventHandler(this.btnPrintInvoice_Click);
             // 
             // dgvOrder
             // 
@@ -140,6 +154,37 @@
             this.dgvOrder.TabIndex = 12;
             this.dgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
             this.dgvOrder.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellValueChanged);
+            // 
+            // foodNameDataGridViewTextBoxColumn
+            // 
+            this.foodNameDataGridViewTextBoxColumn.DataPropertyName = "FoodName";
+            this.foodNameDataGridViewTextBoxColumn.HeaderText = "Food Name";
+            this.foodNameDataGridViewTextBoxColumn.Name = "foodNameDataGridViewTextBoxColumn";
+            this.foodNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.foodNameDataGridViewTextBoxColumn.Width = 169;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Sub Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // Column1
+            // 
+            this.Column1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column1.HeaderText = "Del";
+            this.Column1.Name = "Column1";
+            this.Column1.Text = "Del";
+            this.Column1.UseColumnTextForButtonValue = true;
+            this.Column1.Width = 30;
             // 
             // invoiceDetailBindingSource
             // 
@@ -239,51 +284,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Total";
             // 
-            // foodNameDataGridViewTextBoxColumn
-            // 
-            this.foodNameDataGridViewTextBoxColumn.DataPropertyName = "FoodName";
-            this.foodNameDataGridViewTextBoxColumn.HeaderText = "Food Name";
-            this.foodNameDataGridViewTextBoxColumn.Name = "foodNameDataGridViewTextBoxColumn";
-            this.foodNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.foodNameDataGridViewTextBoxColumn.Width = 169;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Qty";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.Width = 30;
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Sub Total";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // Column1
-            // 
-            this.Column1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column1.HeaderText = "Del";
-            this.Column1.Name = "Column1";
-            this.Column1.Text = "Del";
-            this.Column1.UseColumnTextForButtonValue = true;
-            this.Column1.Width = 30;
-            // 
-            // btnPrintInvoice
-            // 
-            this.btnPrintInvoice.BackColor = System.Drawing.Color.Khaki;
-            this.btnPrintInvoice.FlatAppearance.BorderSize = 0;
-            this.btnPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintInvoice.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintInvoice.Location = new System.Drawing.Point(117, 595);
-            this.btnPrintInvoice.Name = "btnPrintInvoice";
-            this.btnPrintInvoice.Size = new System.Drawing.Size(75, 40);
-            this.btnPrintInvoice.TabIndex = 22;
-            this.btnPrintInvoice.Text = "Print";
-            this.btnPrintInvoice.UseVisualStyleBackColor = false;
-            this.btnPrintInvoice.Click += new System.EventHandler(this.btnPrintInvoice_Click);
-            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,7 +291,7 @@
             this.Controls.Add(this.panListOrder);
             this.Controls.Add(this.panMenu);
             this.Name = "MenuForm";
-            this.Size = new System.Drawing.Size(1030, 660);
+            this.Size = new System.Drawing.Size(1030, 663);
             this.panMenu.ResumeLayout(false);
             this.panListOrder.ResumeLayout(false);
             this.panListOrder.PerformLayout();

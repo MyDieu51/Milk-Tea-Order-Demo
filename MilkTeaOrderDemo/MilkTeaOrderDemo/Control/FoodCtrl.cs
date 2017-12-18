@@ -47,6 +47,7 @@ namespace MilkTeaOrderDemo
 
         public void EditFoodInfo(int id, string name, int price, int basicPrice, string picLocal, DataGridView dgvMenu)
         {
+            
             int index = FindFood(id);
             listFoods[index].Name = name;
             listFoods[index].Price = price;

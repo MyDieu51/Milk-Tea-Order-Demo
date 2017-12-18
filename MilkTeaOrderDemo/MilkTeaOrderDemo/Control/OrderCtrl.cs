@@ -63,7 +63,7 @@ namespace MilkTeaOrderDemo
                 total += item.total;
             }
             tempInvoice.vat = total * 0.1;
-            tempInvoice.total = tempInvoice.vat + total;
+            tempInvoice.total = total;
         }
 
         public void Confirm()
