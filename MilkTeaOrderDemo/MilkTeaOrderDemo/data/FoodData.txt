@@ -1,3 +1,11 @@
 {"IdFood":1,"Name":"Tteokbokki","Price":30000,"BasicPrice":20000,"PicLocal":"..\\..\\pic\\Tteokbokki.png"}
 {"IdFood":2,"Name":"Spicy Chicken and Cheese","Price":90000,"BasicPrice":40000,"PicLocal":"..\\..\\pic\\maxresdefault.jpg"}
 {"IdFood":3,"Name":"Jajangmyeon","Price":40000,"BasicPrice":20000,"PicLocal":"..\\..\\pic\\jjajangmyeon-plate.jpg"}
+{"IdFood":4,"Name":"Bibimbap","Price":50000,"BasicPrice":25000,"PicLocal":"..\\..\\pic\\bibimbap-recipe-fp.jpg"}
+{"IdFood":5,"Name":"Kimbap","Price":39000,"BasicPrice":15000,"PicLocal":"..\\..\\pic\\20090723-kimbap-intro.jpg"}
+{"IdFood":6,"Name":"Bulgogi","Price":90000,"BasicPrice":40000,"PicLocal":"..\\..\\pic\\Bulgogi-thịt-bò-nướng.png"}
+{"IdFood":7,"Name":"Kimchi","Price":20000,"BasicPrice":10000,"PicLocal":"..\\..\\pic\\Kimchi.png"}
+{"IdFood":8,"Name":"Aquafina","Price":10000,"BasicPrice":3000,"PicLocal":"..\\..\\pic\\83568193-2418-40f0-8367-4fd80481e2f8_1.fc5284020d9e9b9bcd45d777a9e62bb5.jpeg"}
+{"IdFood":9,"Name":"Pepsi","Price":10000,"BasicPrice":4000,"PicLocal":"..\\..\\pic\\blue.png"}
+{"IdFood":10,"Name":"Orange Juice","Price":15000,"BasicPrice":7000,"PicLocal":"..\\..\\pic\\orange-juice.jpg"}
+{"IdFood":11,"Name":"Iced Tea","Price":10000,"BasicPrice":4000,"PicLocal":"..\\..\\pic\\31wew3epnvL._SX350_large.jpeg"}

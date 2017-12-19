@@ -49,12 +49,13 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foodModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnClean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodModelBindingSource)).BeginInit();
@@ -260,6 +261,16 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Please choose an image";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(182, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(466, 38);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "ADD, EDIT AND DELETE RECIPE";
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "IdFood";
@@ -296,21 +307,24 @@
             // 
             this.foodModelBindingSource.DataSource = typeof(MilkTeaOrderDemo.Food);
             // 
-            // label5
+            // btnClean
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(182, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(466, 38);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "ADD, EDIT AND DELETE RECIPE";
+            this.btnClean.FlatAppearance.BorderSize = 0;
+            this.btnClean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClean.Image = ((System.Drawing.Image)(resources.GetObject("btnClean.Image")));
+            this.btnClean.Location = new System.Drawing.Point(478, 85);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(45, 38);
+            this.btnClean.TabIndex = 18;
+            this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // EditFoodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label4);
@@ -361,5 +375,6 @@
         private System.Windows.Forms.BindingSource foodModelBindingSource;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnClean;
     }
 }
