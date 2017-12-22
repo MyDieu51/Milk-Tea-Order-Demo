@@ -27,6 +27,7 @@ namespace MilkTeaOrderDemo
 
         public void LoadInfo()
         {
+            panMenu.Controls.Clear();
             List<Menu> listMenu = new List<Menu>();
             for (int i = 0; i < orderCtrl.foodCtrl.ListFoods.Count; i++)
             {
@@ -42,7 +43,7 @@ namespace MilkTeaOrderDemo
             txtDate.Text = DateTime.Now.ToShortDateString();
             txtTime.Text = DateTime.Now.ToLongTimeString();
         }
-
+      
         private void UpdateOrder(object sender, EventArgs e, Food food)
         {
             orderCtrl.InputOrder(food, dgvOrder, txtVAT, txtTotal);

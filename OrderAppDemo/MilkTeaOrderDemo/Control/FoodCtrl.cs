@@ -53,20 +53,18 @@ namespace MilkTeaOrderDemo
             listFoods[index].Price = price;
             listFoods[index].BasicPrice = basicPrice;
             listFoods[index].PicLocal = picLocal;
-            IOMethods.Instance.EditData<Food>(path, listFoods);
-            dgvMenu.DataSource = listFoods;
+            IOMethods.Instance.EditData<Food>(path, listFoods);          
         }
 
         public void DeleteFoodInfo(int id, DataGridView dgvMenu)
         {
             int index = FindFood(id); ;
-            File.Delete(listFoods[index].PicLocal);
+            //File.Delete(listFoods[index].PicLocal);
             listFoods.RemoveAt(index);
             if (listFoods.Count != 0)
                 Food.ID = listFoods[listFoods.Count - 1].IdFood + 1;
             else Food.ID = 0;
-            IOMethods.Instance.EditData<Food>(path, listFoods);
-            dgvMenu.DataSource = listFoods;
+            IOMethods.Instance.EditData<Food>(path, listFoods);          
         }
 
         private int FindFood(int id)
@@ -81,6 +79,6 @@ namespace MilkTeaOrderDemo
                 }
             }
             return index;
-        }
+        }       
     }
 }
